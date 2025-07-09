@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Calculadora Simple</h1>
+    <p>Ingrese dos números para realizar una suma o resta:</p>
+    <input type="number" id="numero1" placeholder="Ingrese el primer número">
+    <input type="number" id="numero2" placeholder="Ingrese el segundo número">
+    <button id="suma">+</button>
+    <button id="resta">-</button>
+    <div id="resultado"></div>
+    
+    <script>
+        document.getElementById("suma").addEventListener("click", function() {
+            let num1 = parseFloat(document.getElementById("numero1").value);
+            let num2 = parseFloat(document.getElementById("numero2").value);
+            document.getElementById("resultado").innerHTML = "El resultado de la suma es: " + (num1 + num2);
+        });
+        document.getElementById("resta").addEventListener("click", function() {
+            let num1 = parseFloat(document.getElementById("numero1").value);
+            let num2 = parseFloat(document.getElementById("numero2").value);
+            document.getElementById("resultado").innerHTML = "El resultado de la resta es: " + (num1 - num2);
+        });
+    </script>
+</body>
+</html>
